@@ -24,6 +24,11 @@ public class PlayerScript : MonoBehaviour
         
         rb.velocity = new Vector3(moveInput.x * speed, rb.velocity.y, moveInput.y * speed);
 
+        if(Input.GetButton("Fire3")){
+
+        }
+    }
+    void doRoll(){
         
     }
 }
