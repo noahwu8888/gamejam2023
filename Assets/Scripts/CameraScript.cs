@@ -7,8 +7,6 @@ public class CameraScript : MonoBehaviour
     public Transform target; // the target to follow
     public float smoothing = 5f; // the smoothing factor
     public float cameraHeight = 10f; // the height of the camera above the target
-    public float cameraAngle = 45f; // the angle at which the camera looks at the target
-
     public float cameraDistance = 10f; // the distance between the camera and the target
 
     private Vector3 offset; // the offset between the target and the camera
