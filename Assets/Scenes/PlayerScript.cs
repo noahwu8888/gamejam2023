@@ -24,6 +24,12 @@ public class PlayerScript : MonoBehaviour
         // Calculate the movement vector based on the input
         moveDirection = new Vector3(horizontalInput, 0, verticalInput).normalized();
 
+        // Calculate the movement vector based on the input and camera's forward direction
+        Vector3 forward = Vector3.Scale(cameraTransform.forward, new Vector3(1, 0, 1)).normalized;
+        Vector3 right = Vector3.Scale(cameraTransform.right, new Vector3(1, 0, 1)).normalized;
+        moveDirection = (forward * verticalInput + right * horizontalInput).normalized;
+
+
         // Adjust the movement vector to snap to 45-degree angles
         if (moveDirection.magnitude != 0){
             // Calculate the angle between the current movement vector and the X-axis
@@ -39,8 +45,8 @@ public class PlayerScript : MonoBehaviour
     void FixedUpdate()
 {
 
-    // Set the rigidbody velocity to the movement direction multiplied by the speed
-    rb.velocity = moveDirection * speed;
+        // Set the rigidbody velocity to the movement direction multiplied by the speed
+        rb.velocity = cameraTransform.TransformDirection(moveDirection) * speed;
     
 }
 }
