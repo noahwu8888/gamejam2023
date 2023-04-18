@@ -1,44 +1,12 @@
-# gamejam2023
+# Game Jam 2023
 
-Sebs Experimental Code 
+## Description
 
-Movement:
+Game Jam 2023 is an in-progress 2.5D game developed by a team of six talented game developers. The game is currently in development and the idea, controls, and other details are subject to change.
 
-```csharp
-public float speed = 5f;                    // Movement speed (adjustable in the editor)
-private Rigidbody2D rb;                    // Reference to the Rigidbody2D component
-private Vector2 moveDirection;             // Current movement direction
+## Contributors
 
-void Start()
-{
-    rb = GetComponent<Rigidbody2D>();     // Get the reference to the Rigidbody2D component
-    moveDirection = Vector2.zero;          // Initialize the movement direction to zero (no movement)
-}
-
-void Update()
-{
-    float horizontalInput = Input.GetAxisRaw("Horizontal");    // Get the raw input value for horizontal movement
-    float verticalInput = Input.GetAxisRaw("Vertical");        // Get the raw input value for vertical movement
-
-    // Calculate the movement vector based on the input
-    moveDirection = new Vector2(horizontalInput, verticalInput).normalized;
-
-    // Adjust the movement vector to snap to 45-degree angles
-    if (moveDirection.magnitude != 0)
-    {
-        // Calculate the angle between the current movement vector and the X-axis
-        float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
-
-        // Round the angle to the nearest 45 degrees
-        angle = Mathf.Round(angle / 45) * 45;
-
-        // Convert the angle back to a vector
-        moveDirection = Quaternion.Euler(0, 0, angle) * Vector2.right;
-    }
-}
-
-void FixedUpdate()
-{
-    // Set the rigidbody velocity to the movement direction multiplied by the speed
-    rb.velocity = moveDirection * speed;
-}
+Alex (Story Writer)
+Kyle, Noah, and Sebastian (Programming)
+Noah (Music)
+Abe and Aiden (Art)
