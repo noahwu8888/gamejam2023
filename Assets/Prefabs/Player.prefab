@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: 801194146160175110}
   - component: {fileID: 801194146160175111}
   - component: {fileID: 801194146160175106}
+  - component: {fileID: 1630866572326332995}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -276,3 +277,18 @@ MonoBehaviour:
   rollMultiplier: 3
   rollLength: 0.25
   rollCooldown: 1
+--- !u!114 &1630866572326332995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801194146160175108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cace215d936e13242a377f3dbcb0e71e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mousePos: {fileID: 801194145160494005}
+  projectile: {fileID: 5520313386523277575, guid: 855d6067b4a83aa4780c7edc8e529658,
+    type: 3}
