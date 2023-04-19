@@ -26,7 +26,7 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private float rollLength = 3f;
     private float rollTimer;
     [SerializeField] private float rollCooldown = 1f;
-    
+
     private float rollCooldownTimer;
 
     void doRoll(Vector3 direction)
@@ -66,7 +66,7 @@ public class PlayerScript : MonoBehaviour
         }
 
         Vector3 direction = new Vector3(moveInput.x * speed, rb.velocity.y, moveInput.y * speed);
-        if (Input.GetButton("Fire3") && rollCooldownTimer < 0)
+        if (Input.GetButton("Fire3") && rollCooldownTimer < 0 && rb.velocity != Vector3.zero)
         {
             rollTimer = rollLength;
             state = State.Rolling;
