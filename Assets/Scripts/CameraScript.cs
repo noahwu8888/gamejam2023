@@ -13,8 +13,9 @@ public class CameraScript : MonoBehaviour
 
     void Start()
     {
-        // calculate the offset between the target and the camera
+        // Calculate the offset between the target and the camera, taking into account the desired orientation
         offset = new Vector3(0f, cameraHeight, -cameraDistance);
+
     }
 
     void FixedUpdate()
