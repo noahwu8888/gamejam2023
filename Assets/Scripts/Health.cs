@@ -4,7 +4,7 @@ using UnityEngine.Rendering.Universal;
 /// <summary>
 /// Handles health.
 /// </summary>
-public class HealthManager : MonoBehaviour
+public class Health : MonoBehaviour
 {
     [SerializeField]
     private float _maxHealth;
@@ -12,11 +12,11 @@ public class HealthManager : MonoBehaviour
     /// <summary>
     /// The current health.
     /// </summary>
-    public float Health { get; private set; }
+    public float HealthValue { get; private set; }
 
     private void Start()
     {
-        Health = _maxHealth;
+        HealthValue = _maxHealth;
     }
 
     /// <summary>
@@ -25,10 +25,10 @@ public class HealthManager : MonoBehaviour
     public void TakeDamage(float damage)
     {
         if (damage < 0) return;
-        Health -= damage;
-        if (Health <= 0)
+        HealthValue -= damage;
+        if (HealthValue <= 0)
             Die();
-        Debug.Log(Health);
+        Debug.Log(HealthValue);
     }
 
     /// <summary>
@@ -37,9 +37,9 @@ public class HealthManager : MonoBehaviour
     public void Heal(float health)
     {
         if (health < 0) return;
-        Health += health;
-        if (Health > _maxHealth)
-            Health = _maxHealth;
+        HealthValue += health;
+        if (HealthValue > _maxHealth)
+            HealthValue = _maxHealth;
     }
 
     /// <summary>

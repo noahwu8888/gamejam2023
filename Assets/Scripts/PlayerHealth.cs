@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PlayerHealthManager : HealthManager
+public class PlayerHealth : Health
 {
     protected override void Die()
     {

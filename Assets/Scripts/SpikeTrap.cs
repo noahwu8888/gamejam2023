@@ -13,7 +13,7 @@ public class SpikeTrap : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            HealthManager health = col.gameObject.GetComponent<HealthManager>();
+            Health health = col.gameObject.GetComponent<Health>();
             health.TakeDamage(_damageDealt);
         }
     }
