@@ -9,7 +9,7 @@ public class ShootScript : MonoBehaviour
 
     private Vector3 direction;
 
-    private int selectedWeapon = 0;
+    private int selectedWeapon = 1;
     public GameObject[] projectile;
 
     public float shootCooldown = .5f;
@@ -20,13 +20,9 @@ public class ShootScript : MonoBehaviour
     {
         if (Input.GetKey("1"))
         {
-            selectedWeapon = 0;
-        }
-        else if (Input.GetKey("2"))
-        {
             selectedWeapon = 1;
         }
-        else if (Input.GetKey("3"))
+        else if (Input.GetKey("2"))
         {
             selectedWeapon = 2;
         }
@@ -40,6 +36,10 @@ public class ShootScript : MonoBehaviour
             ShootProjectile();
             shootTimer = shootCooldown;
         }
+        if (Input.GetButtonDown("Fire3"))
+        {
+            DoMelee();
+        }
     }
 
     void ShootProjectile()
@@ -48,5 +48,11 @@ public class ShootScript : MonoBehaviour
         projectileObj.GetComponent<Rigidbody>().velocity = (mousePos.position - transform.position).normalized;
 
     }
-
+    void DoMelee()
+    {
+        Vector3 direction = (mousePos.position - transform.position).normalized;
+        Quaternion rotation = Quaternion.LookRotation(direction, Vector3.up);
+        var projectileObj = Instantiate(projectile[0], transform.position + (mousePos.position - transform.position).normalized, rotation) as GameObject;
+        projectileObj.GetComponent<Rigidbody>().velocity = (mousePos.position - transform.position).normalized;
+    }
 }

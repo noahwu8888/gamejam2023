@@ -6,7 +6,7 @@ public class PlayerProjectile : MonoBehaviour
 {
 
     public bool isTPGun = false;
-
+    public bool isMelee = false;
     public float damage = 1;
     private Rigidbody rb;
     [SerializeField] private float projectileSpeed;
@@ -15,6 +15,14 @@ public class PlayerProjectile : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.velocity *= projectileSpeed;
+    }
+
+    private void Update()
+    {
+        if (isMelee){
+            Destroy(gameObject, .1f);
+            
+        }
     }
     void OnCollisionEnter(Collision co)
     {
