@@ -56,10 +56,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Bits: 24
+    - _Bits: 8
     - _CameraFalloff: 1
+    - _ColorDepth: 8
+    - _Lerp: 0.5
+    - _LerpControl: 0.9
     - _LightStep: 8
     - _Modulo: 16
+    - _Power: 0.27
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Step: 0
