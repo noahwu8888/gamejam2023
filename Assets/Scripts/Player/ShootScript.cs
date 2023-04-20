@@ -9,14 +9,28 @@ public class ShootScript : MonoBehaviour
 
     private Vector3 direction;
 
-    public GameObject projectile;
+    private int selectedWeapon = 0;
+    public GameObject[] projectile;
 
     public float shootCooldown = .5f;
     private float shootTimer;
-    // Update is called once per frame
 
+    // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey("1"))
+        {
+            selectedWeapon = 0;
+        }
+        else if (Input.GetKey("2"))
+        {
+            selectedWeapon = 1;
+        }
+        else if (Input.GetKey("3"))
+        {
+            selectedWeapon = 2;
+        }
+
         if (shootTimer >= 0)
         {
             shootTimer -= Time.deltaTime;
@@ -30,7 +44,7 @@ public class ShootScript : MonoBehaviour
 
     void ShootProjectile()
     {
-        var projectileObj = Instantiate(projectile, transform.position + (mousePos.position - transform.position).normalized / 10, Quaternion.identity) as GameObject;
+        var projectileObj = Instantiate(projectile[selectedWeapon], transform.position + (mousePos.position - transform.position).normalized / 10, Quaternion.identity) as GameObject;
         projectileObj.GetComponent<Rigidbody>().velocity = (mousePos.position - transform.position).normalized;
 
     }

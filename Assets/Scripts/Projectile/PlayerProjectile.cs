@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerProjectile : MonoBehaviour
 {
+
+    public bool isTPGun = false;
     private Rigidbody rb;
     [SerializeField] private float projectileSpeed;
 
@@ -14,9 +16,9 @@ public class PlayerProjectile : MonoBehaviour
     }
     void OnCollisionEnter(Collision co)
     {
-        if (co.gameObject.tag != "Bullet" && co.gameObject.tag != "Player")
-        {
-            Destroy(gameObject);
+        if(isTPGun){
+            TeleportGunManager.Singleton.AddEnemy(co.gameObject);
         }
+        Destroy(gameObject);
     }
 }
