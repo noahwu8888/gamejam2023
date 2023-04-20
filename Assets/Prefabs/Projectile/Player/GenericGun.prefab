@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 959854242292487106}
   - component: {fileID: 5903647517716199229}
   - component: {fileID: 6525630126136079225}
-  - component: {fileID: -8065208706081102877}
+  - component: {fileID: 8054090715028078346}
   m_Layer: 0
-  m_Name: TPGun
+  m_Name: GenericGun
   m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,7 +115,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-8065208706081102877
+--- !u!114 &8054090715028078346
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,6 +127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57228ac5decab014280901b52fccd697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTPGun: 1
-  damage: 0
-  projectileSpeed: 20
+  isTPGun: 0
+  damage: 5
+  projectileSpeed: 40

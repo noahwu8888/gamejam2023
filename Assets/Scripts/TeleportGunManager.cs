@@ -34,9 +34,9 @@ public class TeleportGunManager : MonoBehaviour
     /// </summary>
     /// <returns>Whether or not the operation was successful.</returns>
     public bool AddEnemy(GameObject go) 
-    { 
-        Enemy enemy = go.GetComponent<Enemy>();
-        if (go is null)
+    {
+        Enemy enemy;
+        if (!go.TryGetComponent<Enemy>(out enemy))
             return false;
         _numberOfEnemies[(int)enemy.EnemyType]++;
         Destroy(go);

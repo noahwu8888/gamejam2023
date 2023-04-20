@@ -238,6 +238,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mousePos: {fileID: 801194145160494005}
-  projectile: {fileID: 5520313386523277575, guid: 855d6067b4a83aa4780c7edc8e529658,
-    type: 3}
+  projectile:
+  - {fileID: 5520313386523277575, guid: e602f1821a10f2e409657d9a78fa1dac, type: 3}
+  - {fileID: 5520313386523277575, guid: 855d6067b4a83aa4780c7edc8e529658, type: 3}
+  - {fileID: 5520313386523277575, guid: 876938d2213c06149a215a2ca82e73c1, type: 3}
   shootCooldown: 0.5
