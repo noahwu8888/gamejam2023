@@ -6,6 +6,8 @@ public class PlayerProjectile : MonoBehaviour
 {
 
     public bool isTPGun = false;
+
+    public float damage = 1;
     private Rigidbody rb;
     [SerializeField] private float projectileSpeed;
 
@@ -16,9 +18,11 @@ public class PlayerProjectile : MonoBehaviour
     }
     void OnCollisionEnter(Collision co)
     {
-        if(isTPGun){
+        if (isTPGun)
+        {
             TeleportGunManager.Singleton.AddEnemy(co.gameObject);
         }
-        Destroy(gameObject);
+        if (co.gameObject.tag != "Player" && co.gameObject.tag != "EnemyBullet")
+            Destroy(gameObject);
     }
 }

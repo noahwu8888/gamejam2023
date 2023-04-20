@@ -12,18 +12,26 @@ public enum EnemyType
 /* VERY IMPORTANT: Please keep the number of enemies accurate to the enum.
  * The game WILL BREAK if this is not kept updated.
  */
-public partial class EnemyManager { public const int NUMBER_OF_ENEMIES = 1;  }
+public partial class EnemyManager { public const int NUMBER_OF_ENEMIES = 1; }
 
 /// <summary>
 /// Stores information about enemies.
 /// </summary>
 public class Enemy : Health
 {
-    [SerializeField] 
+    [SerializeField]
     private EnemyType _enemyType;
 
     /// <summary>
     /// The type of enemy this script represents.
     /// </summary>
     public EnemyType EnemyType => _enemyType;
+
+    void OnCollisionEnter(Collision co)
+    {
+        if (co.gameObject.tag == "PlayerBullet")
+        {
+            TakeDamage(co.gameObject.GetComponent<PlayerProjectile>().damage);
+        }
+    }
 }
