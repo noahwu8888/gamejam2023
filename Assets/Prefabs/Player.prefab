@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 801194145160494005}
   - component: {fileID: 801194145160493961}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mouse Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 801194145379196083}
   - component: {fileID: 801194145379196082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,9 +104,10 @@ GameObject:
   - component: {fileID: 801194146160175105}
   - component: {fileID: 801194146160175110}
   - component: {fileID: 801194146160175111}
+  - component: {fileID: 614725406412168505}
   - component: {fileID: 801194146160175106}
   - component: {fileID: 1630866572326332995}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -209,6 +210,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &614725406412168505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801194146160175108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5fa77c5b1245dd428151ecca0064bfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 10
 --- !u!114 &801194146160175106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,7 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mousePos: {fileID: 801194145160494005}
   projectile:
+  - {fileID: 5520313386523277575, guid: e602f1821a10f2e409657d9a78fa1dac, type: 3}
   - {fileID: 5520313386523277575, guid: 855d6067b4a83aa4780c7edc8e529658, type: 3}
   - {fileID: 5520313386523277575, guid: 876938d2213c06149a215a2ca82e73c1, type: 3}
-  - {fileID: 0}
   shootCooldown: 0.5

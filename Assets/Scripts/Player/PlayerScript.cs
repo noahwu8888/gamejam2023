@@ -6,6 +6,7 @@ public class PlayerScript : MonoBehaviour
 {
     #region General
     [SerializeField] private float speed = 5f;
+    private Collider col;
     private Rigidbody rb;
     private Vector2 moveInput;
 
@@ -33,11 +34,13 @@ public class PlayerScript : MonoBehaviour
     {
         if (rollTimer > 0)
         {
+            col.enabled = false;
             rb.velocity = direction * rollMultiplier;
             rollTimer -= Time.deltaTime;
         }
         else
         {
+            col.enabled = true;
             state = State.Normal;
         }
     }
@@ -48,6 +51,7 @@ public class PlayerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        col = GetComponent<Collider>();
         rb = GetComponent<Rigidbody>();
         state = State.Normal;
 
@@ -66,7 +70,7 @@ public class PlayerScript : MonoBehaviour
         }
 
         Vector3 direction = new Vector3(moveInput.x * speed, rb.velocity.y, moveInput.y * speed);
-        if (Input.GetButton("Fire3") && rollCooldownTimer < 0 && rb.velocity != Vector3.zero)
+        if (Input.GetButton("Jump") && rollCooldownTimer < 0 && rb.velocity != Vector3.zero)
         {
             rollTimer = rollLength;
             state = State.Rolling;

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -8065208706081102877}
   m_Layer: 0
   m_Name: TPGun
-  m_TagString: Bullet
+  m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,4 +128,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTPGun: 1
-  projectileSpeed: 40
+  damage: 0
+  projectileSpeed: 20
