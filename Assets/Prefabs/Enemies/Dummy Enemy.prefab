@@ -131,7 +131,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7074926404844188825}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16ba0c5f5ebc49540bf15ce4fa18332c, type: 3}
+  m_Script: {fileID: 11500000, guid: f7b5f44960c7eaf468fde783818e2398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 20
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7074926404844188825}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 941ea584e1d1ad045a4e4a5d72dbf4cc, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d4a48b79240e6c4c8ce579fc7d7563d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
@@ -161,6 +161,8 @@ MonoBehaviour:
   timeBetweenAttacks: 1
   projectile: {fileID: 5520313386523277575, guid: 85119c65b7d3a594f803a2a048523fac,
     type: 3}
+  _projectileCount: 3
+  _spread: 15
   sightRange: 20
   attackRange: 10
   playerInSightRange: 0
