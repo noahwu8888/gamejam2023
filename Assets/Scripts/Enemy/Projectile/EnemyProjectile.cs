@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerProjectile : MonoBehaviour
+public class EnemyProjectile : MonoBehaviour
 {
-
-    public bool isTPGun = false;
     public bool isMelee = false;
     public float damage = 1;
     private Rigidbody rb;
@@ -22,16 +20,12 @@ public class PlayerProjectile : MonoBehaviour
         if (isMelee)
         {
             Destroy(gameObject, .1f);
-
         }
     }
+
     void OnCollisionEnter(Collision co)
     {
-        if (isTPGun)
-        {
-            TeleportGunManager.Singleton.AddEnemy(co.gameObject);
-        }
-        if (co.gameObject.tag != "Player" && co.gameObject.tag != "EnemyBullet" && co.gameObject.tag != "PlayerBullet")
+        if (co.gameObject.tag != "Enemy" && co.gameObject.tag != "EnemyBullet" && co.gameObject.tag != "PlayerBullet")
             Destroy(gameObject);
     }
 }

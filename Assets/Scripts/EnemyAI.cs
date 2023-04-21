@@ -82,10 +82,11 @@ public class EnemyAI : MonoBehaviour
 
         if (!alreadyAttacked)
         {
+
             ///Attack code here
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            var projectileObj = Instantiate(projectile, transform.position + (player.position - transform.position).normalized / 10, Quaternion.identity) as GameObject;
+            projectileObj.GetComponent<Rigidbody>().velocity = (player.position - transform.position).normalized;
+            Debug.Log("Shot");
             ///End of attack code
 
             alreadyAttacked = true;
