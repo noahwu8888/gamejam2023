@@ -1757,7 +1757,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
+  m_FocalLength: 10.069196
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1766,7 +1766,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 100
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1814,7 +1814,10 @@ MonoBehaviour:
   target: {fileID: 770575544}
   smoothing: 500
   cameraHeight: 10
-  cameraDistance: 10
+  cameraDistance: 5
+  obstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1001 &1463050027
 PrefabInstance:
   m_ObjectHideFlags: 0
