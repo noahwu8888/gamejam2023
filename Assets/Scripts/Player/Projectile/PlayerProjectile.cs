@@ -31,7 +31,7 @@ public class PlayerProjectile : MonoBehaviour
         {
             TeleportGunManager.Singleton.AddEnemy(co.gameObject);
         }
-        if (co.gameObject.tag != "Player" && co.gameObject.tag != "EnemyBullet" && co.gameObject.tag != "PlayerBullet")
+        if (co.gameObject.tag != "Player" && co.gameObject.tag != "PlayerBullet")
             Destroy(gameObject);
     }
 }
