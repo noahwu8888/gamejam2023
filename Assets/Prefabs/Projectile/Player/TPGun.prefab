@@ -128,5 +128,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTPGun: 1
+  isMelee: 0
   damage: 0
   projectileSpeed: 20

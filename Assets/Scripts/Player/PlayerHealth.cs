@@ -16,7 +16,7 @@ public class PlayerHealth : Health
     {
         //transform.position = SpawnPoint;
         //Heal(float.MaxValue);
-
+        GetComponent<ShootScript>().IsTPDisabled = false;
         SceneManager.LoadScene("CaveLevel");
     }
 }
