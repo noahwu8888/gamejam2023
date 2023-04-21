@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shovel
-  m_Shader: {fileID: -6465566751694194690, guid: 5b953bc686d30a040a31205c6612017f,
+  m_Name: Shader Graphs_PixelFire
+  m_Shader: {fileID: -6465566751694194690, guid: 878ea9689d6ac9f428d27478e6a3f578,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -21,8 +21,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _SampleTexture2D_4c05b78bb6c64b3e9b090a7a410c4300_Texture_1:
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: c889eb399db5c0b4eab81ab597ddc9ad, type: 3}
+        m_Texture: {fileID: 2800000, guid: 24820c3c97310644ab4d1b13ffe6dfe6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -39,20 +43,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Bits: 6
-    - _CameraFalloff: 0
-    - _ColorDepth: 8
-    - _Lerp: 0
-    - _LightStep: 16
+    - _Bits: 24
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Tiling: 1
-    - _Tiling_2: 0
     m_Colors:
-    - _Color1: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 0}
-    - _Color2: {r: 0.45098042, g: 0.45098042, b: 0.45098042, a: 0}
+    - _Color1: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &7283039122031910670
+--- !u!114 &5462953948097100582
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
