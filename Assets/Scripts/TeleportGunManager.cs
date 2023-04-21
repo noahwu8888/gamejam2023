@@ -19,14 +19,17 @@ public class TeleportGunManager : MonoBehaviour
         }
     }
 
+    [SerializeField]
+    private Transform _teleport;
+
     // The amount of each enemy type that has been teleported by the gun, in order of the EnemyType gun.
-    private int[] _numberOfEnemies;
+    //private int[] _numberOfEnemies;
 
     private void Awake()
     {
         Singleton = this;
         DontDestroyOnLoad(this);
-        _numberOfEnemies = new int[EnemyManager.NUMBER_OF_ENEMIES];
+        //_numberOfEnemies = new int[EnemyManager.NUMBER_OF_ENEMIES];
     }
 
     /// <summary>
@@ -38,17 +41,7 @@ public class TeleportGunManager : MonoBehaviour
         Enemy enemy;
         if (!go.TryGetComponent<Enemy>(out enemy))
             return false;
-        _numberOfEnemies[(int)enemy.EnemyType]++;
-        Destroy(go);
+        go.transform.position = _teleport.position;
         return true;
-    }
-
-    /// <summary>
-    /// Does the funny.
-    /// </summary>
-    // TODO: Implement this.
-    public void DoTheFunny()
-    {
-        throw new System.NotImplementedException("W E E D E A T E R");
     }
 }
