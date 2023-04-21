@@ -66,7 +66,7 @@ public class PlayerScript : MonoBehaviour
         }
 
         Vector3 direction = new Vector3(moveInput.x * speed, rb.velocity.y, moveInput.y * speed);
-        if (Input.GetButton("Fire3") && rollCooldownTimer < 0 && rb.velocity != Vector3.zero)
+        if (Input.GetButton("Jump") && rollCooldownTimer < 0 && rb.velocity != Vector3.zero)
         {
             rollTimer = rollLength;
             state = State.Rolling;
