@@ -3,9 +3,10 @@
 public class PlayerHealth : Health
 {
 
+
     void OnCollisionEnter(Collision co)
     {
-        if (co.gameObject.tag == "EnemyBullet")
+        if (co.gameObject.tag == "EnemyBullet" && !GetComponent<PlayerScript>().isRolling)
         {
             TakeDamage(co.gameObject.GetComponent<EnemyProjectile>().damage);
         }
