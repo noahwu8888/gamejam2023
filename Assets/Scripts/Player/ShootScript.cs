@@ -9,22 +9,24 @@ public class ShootScript : MonoBehaviour
 
     private Vector3 direction;
 
-    private int selectedWeapon = 1;
+    private int selectedWeapon = 0;
     public GameObject[] projectile;
 
     public float shootCooldown = .5f;
     private float shootTimer;
+
+    public bool IsTPDisabled;
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKey("1"))
         {
-            selectedWeapon = 1;
+            selectedWeapon = 0;
         }
         else if (Input.GetKey("2"))
         {
-            selectedWeapon = 2;
+            selectedWeapon = 1;
         }
 
         if (shootTimer >= 0)
@@ -44,6 +46,8 @@ public class ShootScript : MonoBehaviour
 
     void ShootProjectile()
     {
+        /*if (selectedWeapon == 0 && IsTPDisabled)
+            selectedWeapon = 1;*/
         var projectileObj = Instantiate(projectile[selectedWeapon], transform.position + (mousePos.position - transform.position).normalized / 10, Quaternion.identity) as GameObject;
         projectileObj.GetComponent<Rigidbody>().velocity = (mousePos.position - transform.position).normalized;
 
@@ -52,7 +56,7 @@ public class ShootScript : MonoBehaviour
     {
         Vector3 direction = (mousePos.position - transform.position).normalized;
         Quaternion rotation = Quaternion.LookRotation(direction, Vector3.up);
-        var projectileObj = Instantiate(projectile[0], transform.position + (mousePos.position - transform.position).normalized, rotation) as GameObject;
+        var projectileObj = Instantiate(projectile[2], transform.position + (mousePos.position - transform.position).normalized, rotation) as GameObject;
         projectileObj.GetComponent<Rigidbody>().velocity = (mousePos.position - transform.position).normalized;
     }
 }
