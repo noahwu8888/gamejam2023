@@ -113,24 +113,24 @@ public class TextManager : MonoBehaviour
 
         for (float i = 0; i < _timeTillFullyVisible; i += Time.deltaTime)
         {
-            image.color = new Color(image.color.r, image.color.g, image.color.b, 1 - (3 * i + _timeTillFullyVisible) / 4 / _timeTillFullyVisible);
+            image.color = new Color(image.color.r, image.color.g, image.color.b, 1 - (3f * i + _timeTillFullyVisible) / 4 / _timeTillFullyVisible);
             instructionsText.color = new Color(instructionsText.color.r, instructionsText.color.g, instructionsText.color.b, 1 - i / _timeTillFullyVisible);
             yield return new WaitForEndOfFrame();
         }
         _hasCutscenePlayed = 1;
     }
 
-    public IEnumerator DisableGun()
+    /*public IEnumerator DisableGun()
     {
-        Debug.Log("disable");
         Transform panel = _canvas.transform.GetChild(0);
         Image image = panel.GetComponent<Image>();
-        Transform disabledText = _canvas.transform.GetChild(2);
+        Transform disabledText = _canvas.transform.GetChild(3);
         TextMeshProUGUI text = disabledText.GetComponent<TextMeshProUGUI>();
 
         for (float i = 0; i < _timeTillFullyVisible; i += Time.deltaTime)
         {
-            image.color = new Color(image.color.r, image.color.g, image.color.b, 3 * i / 4 / _timeTillFullyVisible);
+            image.color = new Color(image.color.r, image.color.g, image.color.b, 3f * i / 4f / _timeTillFullyVisible);
+            print(3f * i / 4f / _timeTillFullyVisible + "rar");
             text.color = new Color(text.color.r, text.color.g, text.color.b, i / _timeTillFullyVisible);
             yield return new WaitForEndOfFrame();
         }
@@ -144,5 +144,5 @@ public class TextManager : MonoBehaviour
             text.color = new Color(text.color.r, text.color.g, text.color.b, 1 - i / _timeTillFullyVisible);
             yield return new WaitForEndOfFrame();
         }
-    }
+    }*/
 }

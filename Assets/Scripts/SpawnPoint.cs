@@ -13,14 +13,13 @@ public class SpawnPoint : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            print("ahhahha");
             //other.gameObject.GetComponent<PlayerHealth>().SpawnPoint = transform.position;
             other.gameObject.GetComponent<PlayerHealth>().Heal(float.MaxValue);
-            if (_disableGun)
+            /*if (_disableGun)
             {
                 other.gameObject.GetComponent<ShootScript>().IsTPDisabled = true;
-                StartCoroutine(TextManager.Singleton.DisableGun());
-            }
+                //StartCoroutine(TextManager.Singleton.DisableGun());
+            }*/
             Destroy(gameObject);
         }
     }
