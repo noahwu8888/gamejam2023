@@ -52,13 +52,17 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Bits: 24
+    - _Bits: 6
     - _CameraFalloff: 0
+    - _ColorDepth: 8
+    - _DefaultUV: 0
+    - _Lerp: 0
     - _LightStep: 16
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Tiling: 0.64
+    - _Tiling: 6.93
+    - _Tiling_2: 0
     m_Colors:
     - _Color1: {r: 0.34901962, g: 0.16078432, b: 0.09411766, a: 0}
-    - _Color2: {r: 0.7490196, g: 0.454902, b: 0.28627452, a: 0}
+    - _Color2: {r: 0.012254902, g: 0.0029411765, b: 0.0009803922, a: 0}
   m_BuildTextureStacks: []

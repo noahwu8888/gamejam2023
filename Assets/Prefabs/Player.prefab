@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 801194145160494005}
   - component: {fileID: 801194145160493961}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mouse Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 801194145379196083}
   - component: {fileID: 801194145379196082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 801194146160175111}
   - component: {fileID: 801194146160175106}
   - component: {fileID: 1630866572326332995}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
