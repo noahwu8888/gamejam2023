@@ -20,6 +20,8 @@ public class PlayerScript : MonoBehaviour
     #endregion
 
     #region Roll
+
+    public bool isRolling;
     // speed multiplier while rolling
     [SerializeField] private float rollMultiplier = 1.5f;
     private Vector3 rollDirection;
@@ -34,13 +36,13 @@ public class PlayerScript : MonoBehaviour
     {
         if (rollTimer > 0)
         {
-            col.enabled = false;
+            isRolling = true;
             rb.velocity = direction * rollMultiplier;
             rollTimer -= Time.deltaTime;
         }
         else
         {
-            col.enabled = true;
+            isRolling = false;
             state = State.Normal;
         }
     }
@@ -53,6 +55,7 @@ public class PlayerScript : MonoBehaviour
     {
         col = GetComponent<Collider>();
         rb = GetComponent<Rigidbody>();
+        isRolling = false;
         state = State.Normal;
 
     }
