@@ -14,8 +14,12 @@ public class Health : MonoBehaviour
     /// </summary>
     public float HealthValue { get; private set; }
 
+    //reference to the healthbar
+    [SerializeField] private Healthbar _healthbar;
+
     private void Start()
     {
+        _healthbar.UpdateHealthBar(_maxHealth, HealthValue);
         HealthValue = _maxHealth;
     }
 
@@ -26,6 +30,8 @@ public class Health : MonoBehaviour
     {
         if (damage < 0) return;
         HealthValue -= damage;
+        _healthbar.UpdateHealthBar(_maxHealth, HealthValue);
+
         if (HealthValue <= 0)
             Die();
         Debug.Log(HealthValue);

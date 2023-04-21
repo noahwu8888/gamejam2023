@@ -25,7 +25,7 @@ public class EnemyProjectile : MonoBehaviour
 
     void OnCollisionEnter(Collision co)
     {
-        if (co.gameObject.tag != "Enemy" && co.gameObject.tag != "EnemyBullet" && co.gameObject.tag != "PlayerBullet")
+        if (co.gameObject.tag != "Enemy" && co.gameObject.tag != "EnemyBullet")
             Destroy(gameObject);
     }
 }
