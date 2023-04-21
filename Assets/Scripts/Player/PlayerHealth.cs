@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : Health
 {
@@ -13,7 +14,9 @@ public class PlayerHealth : Health
     }
     protected override void Die()
     {
-        transform.position = SpawnPoint;
-        Heal(float.MaxValue);
+        //transform.position = SpawnPoint;
+        //Heal(float.MaxValue);
+
+        SceneManager.LoadScene("CaveLevel");
     }
 }
