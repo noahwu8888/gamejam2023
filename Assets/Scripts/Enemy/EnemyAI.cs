@@ -1,6 +1,7 @@
 ﻿
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -20,6 +21,12 @@ public class EnemyAI : MonoBehaviour
     public float timeBetweenAttacks;
     bool alreadyAttacked;
     public GameObject projectile;
+    [SerializeField]
+    [Tooltip("Number of projectiles fired")]
+    private int _projectileCount = 1;
+    [SerializeField]
+    [Tooltip("Angle between projectiles in degrees.")]
+    private float _spread = 0;
 
     //States
     public float sightRange, attackRange;
@@ -82,11 +89,16 @@ public class EnemyAI : MonoBehaviour
 
         if (!alreadyAttacked)
         {
-
-            ///Attack code here
-            var projectileObj = Instantiate(projectile, transform.position + (player.position - transform.position).normalized / 10, Quaternion.identity) as GameObject;
-            projectileObj.GetComponent<Rigidbody>().velocity = (player.position - transform.position).normalized;
-            Debug.Log("Shot");
+            for (int i = 0; i < _projectileCount; i++)
+            {
+                float angle = _spread * (-_projectileCount + 1 + i) / 2;
+                ///Attack code here
+                var projectileObj = Instantiate(projectile, transform.position + (player.position - transform.position).normalized / 10, Quaternion.identity) as GameObject;
+                Vector3 velocity = (player.position - transform.position).normalized;
+                velocity = Quaternion.Euler(0, angle, 0) * velocity;
+                projectileObj.GetComponent<Rigidbody>().velocity = (player.position - transform.position).normalized;
+                Debug.Log("Shot");
+            }
             ///End of attack code
 
             alreadyAttacked = true;
