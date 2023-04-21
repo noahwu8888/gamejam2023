@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Trail
-  m_Shader: {fileID: -6465566751694194690, guid: f7f1b9215c6c505498a1133b0bf15214,
+  m_Name: Shader Graphs_PixelFire Yellow
+  m_Shader: {fileID: -6465566751694194690, guid: 878ea9689d6ac9f428d27478e6a3f578,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -21,6 +21,14 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _SampleTexture2D_4c05b78bb6c64b3e9b090a7a410c4300_Texture_1:
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 24820c3c97310644ab4d1b13ffe6dfe6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -35,13 +43,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Bits: 16
+    - _Alpha: 1
+    - _Bits: 12
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color: {r: 0.9386859, g: 0.57758063, b: 0.005181517, a: 0}
+    - _Color1: {r: 1, g: 0.6137143, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &7566183855269297133
+--- !u!114 &5462953948097100582
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
