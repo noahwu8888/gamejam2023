@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : Health
 {
-
+    public Vector3 SpawnPoint;
 
     void OnCollisionEnter(Collision co)
     {
@@ -13,8 +14,9 @@ public class PlayerHealth : Health
     }
     protected override void Die()
     {
-        Debug.LogWarning("Player Death is not properly implemented yet.");
-        // TODO: Make the player actually able to die.
-        Heal(float.MaxValue);
+        //transform.position = SpawnPoint;
+        //Heal(float.MaxValue);
+
+        SceneManager.LoadScene("CaveLevel");
     }
 }

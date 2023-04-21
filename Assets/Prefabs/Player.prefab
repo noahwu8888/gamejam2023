@@ -303,6 +303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 10
   _healthbar: {fileID: 6938452870453663164}
+  SpawnPoint: {x: 0, y: 0, z: 0}
 --- !u!114 &801194146160175106
 MonoBehaviour:
   m_ObjectHideFlags: 0
