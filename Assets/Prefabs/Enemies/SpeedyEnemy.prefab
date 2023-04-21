@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7074926404844188834}
   - component: {fileID: 4622972389650335329}
   m_Layer: 7
-  m_Name: Dummy Enemy
+  m_Name: SpeedyEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,7 +110,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 20
+  m_Speed: 40
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 2000
@@ -158,11 +158,11 @@ MonoBehaviour:
     m_Bits: 256
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
-  timeBetweenAttacks: 1
+  timeBetweenAttacks: 0.3
   projectile: {fileID: 5520313386523277575, guid: 85119c65b7d3a594f803a2a048523fac,
     type: 3}
-  _projectileCount: 3
-  _spread: 15
+  _projectileCount: 1
+  _spread: 0
   sightRange: 20
   attackRange: 10
   playerInSightRange: 0
