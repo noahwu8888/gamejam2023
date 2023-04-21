@@ -29,6 +29,7 @@ public class TeleportGunManager : MonoBehaviour
     {
         Singleton = this;
         DontDestroyOnLoad(this);
+        DontDestroyOnLoad(_teleport);
         //_numberOfEnemies = new int[EnemyManager.NUMBER_OF_ENEMIES];
     }
 

@@ -19,8 +19,8 @@ public class Health : MonoBehaviour
 
     private void Start()
     {
-        _healthbar.UpdateHealthBar(_maxHealth, HealthValue);
         HealthValue = _maxHealth;
+        _healthbar.UpdateHealthBar(_maxHealth, HealthValue);
     }
 
     /// <summary>
@@ -34,7 +34,7 @@ public class Health : MonoBehaviour
 
         if (HealthValue <= 0)
             Die();
-        Debug.Log(HealthValue);
+        //Debug.Log(HealthValue);
     }
 
     /// <summary>
@@ -46,6 +46,7 @@ public class Health : MonoBehaviour
         HealthValue += health;
         if (HealthValue > _maxHealth)
             HealthValue = _maxHealth;
+        _healthbar.UpdateHealthBar(_maxHealth, HealthValue);
     }
 
     /// <summary>
