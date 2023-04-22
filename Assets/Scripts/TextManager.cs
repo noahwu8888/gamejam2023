@@ -117,6 +117,7 @@ public class TextManager : MonoBehaviour
             instructionsText.color = new Color(instructionsText.color.r, instructionsText.color.g, instructionsText.color.b, 1 - i / _timeTillFullyVisible);
             yield return new WaitForEndOfFrame();
         }
+        _canvas.SetActive(false);
         _hasCutscenePlayed = 1;
     }
 
